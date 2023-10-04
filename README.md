@@ -2,7 +2,7 @@
 
 This repository implements the SignON_MT class. This class allowed the translation between spoken and sign languages represented by glosses.
 
-This contribution is part of the SignON Project ()
+This contribution is part of the SignON Project (https://signon-project.eu)
 
 ## Requirements
 This research was developed using Python 3.8.0. Below, the library requirements are listed to assure the experiments reproducibility.
