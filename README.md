@@ -24,5 +24,5 @@ encoded_sentence = model.encode(gloss_input.lower(), 'DGS')
 decoded_sentence = model.decode(encoded_sentence, 'de_DE')
 print(decoded_sentence)
 ```
-### Output:
+#### Output:
     der tiefdruck zieht weiter nach norddeutschland
