@@ -1,6 +1,12 @@
 # D48-SignON_MT
 
-This repository implements the SignON_MT class. This class allowed the translation between spoken and sign languages represented by glosses.
+This repository implements the SignON_MT class, which enables the translation between spoken and sign languages represented by glosses.
+
+
+## Languages and models
+
+
+
 
 This contribution is part of the SignON Project (https://signon-project.eu)
 
