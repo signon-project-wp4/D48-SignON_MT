@@ -8,10 +8,10 @@ It includes models for Spanish Sign Language (LSE), German Sign Language (DGS), 
 
 | Language | Approach 1 link | Approach 2 link |
 | ------------- | ------------- | ------------- |
-| LSE | 2.4.1 | 2.4.1 |
-| BSL | 4.19.2 | 2.4.1 |
-| NGT | 1.19.5 |  2.4.1 |
-| SDGS | [LINK](https://github.com/google/sentencepiece) |
+| LSE | [LSE-1](https://github.com/google/sentencepiece) | [LSE-2](https://github.com/google/sentencepiece) |
+| BSL | [BSL-1](https://github.com/google/sentencepiece) | [BSL-2](https://github.com/google/sentencepiece) |
+| NGT | [NGT-1](https://github.com/google/sentencepiece) | [NGT-2](https://github.com/google/sentencepiece) |
+| DGS | [DGS-1](https://github.com/google/sentencepiece) | [DGS-2](https://github.com/google/sentencepiece) |
 
 
 ## Requirements
