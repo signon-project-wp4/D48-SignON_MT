@@ -18,7 +18,7 @@ import os
 # ALLOWED LANGUAGES 
 ALLOWED_SPOKEN_LAN = ['es_XX', 'en_XX', 'de_DE', 'nl_XX']
 ALLOWED_SIGN_LAN = ['LSE', 'BSL', 'DGS', 'NGT']
-# AVAILABE MODELS
+# AVAILABLE MODELS
 MODEL_TYPE_NAME_MAPPER = {0 : '1_LSE', 1 : '1_BSL', 2 : '1_NGT', 
                           3 : '1_DGS-PHOENIX', 4 : '1_DGS-KORPUS', 5 : '1_LSE_AUG',
                           6 : '1_BSL_AUG', 7 : '1_ALL',
