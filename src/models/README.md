@@ -2,9 +2,9 @@
 
 This folder stores the models to load in the SignON-MT class. Below, you can download the available models:
 
-| Language | 1 link | 
+| Language | link | 
 | ------------- | ------------- |
-| MultiLingual | [LSE-1](https://drive.google.com/file/d/1CfklENwuvsn3fgyQm_6QoNwlbzElb6a8/view?usp=sharing)
+| MultiLingual | [Download here](https://drive.google.com/file/d/1CfklENwuvsn3fgyQm_6QoNwlbzElb6a8/view?usp=sharing)
 
 _The first version only includes the multilingual model trained under the approach 1._
 
