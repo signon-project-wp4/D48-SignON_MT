@@ -4,7 +4,9 @@ This repository implements the SignON_MT class, which enables the translation be
 
 ## Languages and models
 
-It includes models for Spanish Sign Language (LSE), German Sign Language (DGS), British Sign Language (BSL) and The Netherlands Sign Language (NGT) and it also implements a multilingual model. The models were trained using SLs corpora and the two learning approaches reported in  _"Deliverable 4.8: Final Routines for transformation of text from and to InterL"_.
+This version only inludes the model for multilingual translation for the following Sign Languages: Spanish Sign Language (LSE), German Sign Language (DGS), British Sign Language (BSL) and The Netherlands Sign Language (NGT).The model was trained using SLs corpora and the two learning approaches reported in  _"Deliverable 4.8: Final Routines for transformation of text from and to InterL"_.
+
+<!---It includes models for Spanish Sign Language (LSE), German Sign Language (DGS), British Sign Language (BSL) and The Netherlands Sign Language (NGT) and it also implements a multilingual model. The models were trained using SLs corpora and the two learning approaches reported in  _"Deliverable 4.8: Final Routines for transformation of text from and to InterL"_.
 
 | Language | Approach 1 link | Approach 2 link |
 | ------------- | ------------- | ------------- |
@@ -12,7 +14,7 @@ It includes models for Spanish Sign Language (LSE), German Sign Language (DGS), 
 | BSL | [BSL-1](https://github.com/google/sentencepiece) | [BSL-2](https://github.com/google/sentencepiece) |
 | NGT | [NGT-1](https://github.com/google/sentencepiece) | [NGT-2](https://github.com/google/sentencepiece) |
 | DGS | [DGS-1](https://github.com/google/sentencepiece) | [DGS-2](https://github.com/google/sentencepiece) |
-
+--->
 
 ## Requirements
 This research was developed using Python 3.8.0. Below, the library requirements are listed to assure the experiments reproducibility.
