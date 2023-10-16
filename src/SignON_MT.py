@@ -18,19 +18,23 @@ import os
 # ALLOWED LANGUAGES 
 ALLOWED_SPOKEN_LAN = ['es_XX', 'en_XX', 'de_DE', 'nl_XX']
 ALLOWED_SIGN_LAN = ['LSE', 'BSL', 'DGS', 'NGT']
-# AVAILABLE MODELS
-MODEL_TYPE_NAME_MAPPER = {0 : '1_LSE', 1 : '1_BSL', 2 : '1_NGT', 
-                          3 : '1_DGS-PHOENIX', 4 : '1_DGS-KORPUS', 5 : '1_LSE_AUG',
-                          6 : '1_BSL_AUG', 7 : '1_ALL',
+# AVAILABLE MODELS - FUTURE RELEASE WILL INCLUDE MORE MODELS
+MODEL_TYPE_NAME_MAPPER = {
+                          # 0 : '1_LSE', 1 : '1_BSL', 2 : '1_NGT', 
+                          # 3 : '1_DGS-PHOENIX', 4 : '1_DGS-KORPUS', 5 : '1_LSE_AUG',
+                          # 6 : '1_BSL_AUG',
                           
-                          8 : '2_LSE', 9 : '2_BSL', 10 : '2_NGT',
-                          11 : '2_DGS-PHOENIX', 12 : '2_DGS-KORPUS', 13 : '2_LSE_AUG',
-                          14 : '2_LSE_AUG', 15 : '2_ALL',
+                          7 : '1_ALL',  # THE ONLY MODEL INCLUDED IN THIS VERSION
+                          
+                          # MODEL FOR APPROACH - 2 - FUTURE RELEASE 
+                          # 8 : '2_LSE', 9 : '2_BSL', 10 : '2_NGT',
+                          # 11 : '2_DGS-PHOENIX', 12 : '2_DGS-KORPUS', 13 : '2_LSE_AUG',
+                          # 14 : '2_LSE_AUG', 15 : '2_ALL',
                           }
 
 
 class SignON_MT:
-    def __init__(self, model_type : int):
+    def __init__(self, model_type : int = 7):
         """
         Construtor for the class SignON_MT. Example:
             model = SignON_MT(7)
@@ -104,33 +108,34 @@ class SignON_MT:
             self.gloss_detokenize = self.spoken_detokenize
             
         else:
+            pass
+            # FUTURE RELEASE
             # APPROACH 2 - MAPPERS - WEIGHTS
-            self.spoken_id_mapper = dict(data_mappers['spoken_id_mapper'])
-            self.spoken_reverse_id_mapper = dict([(a[1], a[0]) for a in data_mappers['spoken_id_mapper']])
-            self.spoken_special_tokens = dict(data_mappers['spoken_special_tokens'])
-            self.spoken_mbart_table, self.spoken_mbart_encoder, self.spoken_mbart_decoder = self.load_mbart(vocab_size = len(data_mappers['spoken_id_mapper']))
+            # self.spoken_id_mapper = dict(data_mappers['spoken_id_mapper'])
+            # self.spoken_reverse_id_mapper = dict([(a[1], a[0]) for a in data_mappers['spoken_id_mapper']])
+            # self.spoken_special_tokens = dict(data_mappers['spoken_special_tokens'])
+            # self.spoken_mbart_table, self.spoken_mbart_encoder, self.spoken_mbart_decoder = self.load_mbart(vocab_size = len(data_mappers['spoken_id_mapper']))
 
-            # A new mBART is created for the gloss processing branch
-            self.gloss_id_mapper = dict(data_mappers['gloss_id_mapper'])
-            self.gloss_reverse_id_mapper = dict([(a[1], a[0]) for a in data_mappers['gloss_id_mapper']])
-            self.gloss_special_tokens = dict(data_mappers['gloss_special_tokens'])
-            self.gloss_mbart_table, self.gloss_mbart_encoder, self.gloss_mbart_decoder = self.load_mbart(vocab_size = len(data_mappers['gloss_id_mapper']))
-
-
+            # # A new mBART is created for the gloss processing branch
+            # self.gloss_id_mapper = dict(data_mappers['gloss_id_mapper'])
+            # self.gloss_reverse_id_mapper = dict([(a[1], a[0]) for a in data_mappers['gloss_id_mapper']])
+            # self.gloss_special_tokens = dict(data_mappers['gloss_special_tokens'])
+            # self.gloss_mbart_table, self.gloss_mbart_encoder, self.gloss_mbart_decoder = self.load_mbart(vocab_size = len(data_mappers['gloss_id_mapper']))
 
 
-            # Loading weights
-            with open(os.path.join('utils', 'mbart_model','mbart_encoder.weights'), 'rb') as f:
-                encoder_w = pickle.load(f)
-            self.spoken_mbart_encoder.set_weihgts(encoder_w)
-            with open(os.path.join('utils', 'mbart_model','mbart_decoder.weights'), 'rb') as f:
-                decoder_w = pickle.load(f)
-            self.spoken_mbart_decoder.set_weihgts(decoder_w)
-            # self.spoken_mbart_table.set_weihgts(w)
+
+
+            # # Loading weights
+            # with open(os.path.join('utils', 'mbart_model','mbart_encoder.weights'), 'rb') as f:
+            #     encoder_w = pickle.load(f)
+            # self.spoken_mbart_encoder.set_weihgts(encoder_w)
+            # with open(os.path.join('utils', 'mbart_model','mbart_decoder.weights'), 'rb') as f:
+            #     decoder_w = pickle.load(f)
+            # self.spoken_mbart_decoder.set_weihgts(decoder_w)
+            # # self.spoken_mbart_table.set_weihgts(w)
             
-            
-            
-            # Creating tokenization and mapping functions
+
+            # # Creating tokenization and mapping functions
             
             
     def load_mbart(self, vocab_size: int = None, in_cpu: bool  = True) -> (TFSharedEmbeddings, TFMBartEncoder, TFMBartDecoder):
