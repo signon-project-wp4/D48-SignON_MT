@@ -1,4 +1,4 @@
-# Model Folder
+# Models Folder
 
 This folder stores the models to load in the SignON-MT class. Below, you can download the available models:
 
